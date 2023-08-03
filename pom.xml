@@ -11,4 +11,21 @@
         <maven.compiler.target>17</maven.compiler.target>
         <exec.mainClass>com.mycompany.conversor.Conversor</exec.mainClass>
     </properties>
+    <build>
+        <plugins>
+          <plugin>
+              <version>3.0.2</version>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <configuration>
+              <archive>
+                <manifest>
+                  <addClasspath>true</addClasspath>
+                  <mainClass>com.mycompany.conversor.Conversor</mainClass>
+                </manifest>
+              </archive>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
 </project>
